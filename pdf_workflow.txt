@@ -1,0 +1,528 @@
+﻿Hospital Management System ΓÇö Complete Workflow
+Page 1
+ Hospital Management System (HMS)
+Complete Project Workflow & Module Structure
+A complete end-to-end workflow for a modern, clear and user-friendly Hospital Management System.
+This document can be used as a reference for UI/UX design, system analysis, database planning and
+development.
+1. System Overview
+ LOGIN
+  Γåô
+ROLE DETECTION
+  Γåô
+DASHBOARD
+  Γåô
+Hospital Modules
+  Γö£ΓöÇΓöÇ Administration
+  Γö£ΓöÇΓöÇ Reception
+  Γö£ΓöÇΓöÇ Doctor
+  Γö£ΓöÇΓöÇ Nurse
+  Γö£ΓöÇΓöÇ Laboratory
+  Γö£ΓöÇΓöÇ Pharmacy
+  Γö£ΓöÇΓöÇ Billing & Payments
+  ΓööΓöÇΓöÇ Patient Portal
+2. Main User Roles
+ 1. Admin
+2. Doctor
+3. Nurse
+4. Receptionist
+5. Pharmacist
+6. Laboratory Staff
+7. Patient
+3. Patient Registration Workflow
+ Patient arrives
+      Γåô
+Receptionist
+      Γåô
+Search Patient
+      Γåô
+Does patient exist?
+   ΓåÖ          Γåÿ
+ YES           NO
+ Γåô              Γåô
+Open Profile   Register Patient
+ Γåô              Γåô
+Update info    Generate Patient ID
+      Γåÿ        ΓåÖ
+        Patient Profile
+              Γåô
+        Book Appointment
+4. Patient Information
+ ΓÇó Patient ID
+ΓÇó Full name
+ΓÇó Gender
+ΓÇó Date of birth
+ΓÇó Phone
+
+=====PAGE 1 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 2
+ΓÇó Address
+ΓÇó Emergency contact
+ΓÇó Blood group
+ΓÇó Allergies
+ΓÇó Medical history
+5. Appointment Workflow
+ Patient / Receptionist
+        Γåô
+Book Appointment
+        Γåô
+Select Department
+        Γåô
+Select Doctor
+        Γåô
+Select Date & Time
+        Γåô
+Confirm Appointment
+        Γåô
+Appointment Status = PENDING
+        Γåô
+Doctor confirms
+        Γåô
+Status = CONFIRMED
+        Γåô
+Patient receives notification
+6. Patient Arrival / Check-in
+ Patient arrives
+      Γåô
+Receptionist searches Patient ID
+      Γåô
+Today's appointment?
+   ΓåÖ          Γåÿ
+ YES           NO
+ Γåô              Γåô
+Check-in      Create/Book visit
+ Γåô              Γåô
+Generate Queue Number
+      Γåô
+Patient waits
+      Γåô
+Nurse calls patient
+7. Nurse Workflow
+ Nurse Dashboard
+      Γåô
+View Patient Queue
+      Γåô
+Call Patient
+      Γåô
+Open Patient Profile
+      Γåô
+Record Vital Signs
+      Γåô
+Blood Pressure
+Temperature
+Heart Rate
+Weight
+Oxygen Level
+      Γåô
+Add Nursing Notes
+      Γåô
+Send Patient to Doctor
+
+=====PAGE 2 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 3
+8. Doctor Consultation Workflow
+ Doctor Dashboard
+      Γåô
+Today's Patient Queue
+      Γåô
+Select Patient
+      Γåô
+View Medical History
+      Γåô
+Review Vital Signs
+      Γåô
+Consultation
+      Γåô
+Doctor records:
+  ΓÇó Symptoms
+  ΓÇó Diagnosis
+  ΓÇó Doctor Notes
+  ΓÇó Treatment
+  ΓÇó Follow-up
+      Γåô
+Does patient need Lab Test?
+   ΓåÖ          Γåÿ
+ YES           NO
+ Γåô              Γåô
+Lab Request   Prescription
+ Γåô              Γåô
+Laboratory    Pharmacy
+9. Laboratory Workflow
+ Doctor requests test
+        Γåô
+Lab receives request
+        Γåô
+Lab Dashboard
+        Γåô
+Patient arrives
+        Γåô
+Collect Sample
+        Γåô
+Status = SAMPLE COLLECTED
+        Γåô
+Perform Test
+        Γåô
+Enter Results
+        Γåô
+Doctor reviews results
+        Γåô
+Patient Medical Record updated
+10. Pharmacy Workflow
+ Doctor creates prescription
+        Γåô
+Pharmacy receives prescription
+        Γåô
+Pharmacist checks medicine
+        Γåô
+Medicine available?
+     ΓåÖ          Γåÿ
+   YES           NO
+    Γåô             Γåô
+Dispense       Out of Stock
+Medicine           Γåô
+    Γåô          Notify Admin
+Update Stock
+    Γåô
+Prescription = COMPLETED
+    Γåô
+
+=====PAGE 3 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 4
+Patient receives medicine
+11. Billing & Payment Workflow
+ Registration
+      Γåô
+Consultation
+      Γåô
+Laboratory
+      Γåô
+Pharmacy
+      Γåô
+Other Services
+      Γåô
+Generate Invoice
+      Γåô
+Calculate Total
+      Γåô
+Patient Payment
+      Γåô
+Payment Status
+   ΓåÖ       Γåô       Γåÿ
+ PAID    PARTIAL   PENDING
+   Γåô       Γåô         Γåô
+Receipt  Balance   Reminder
+12. Medical Records Workflow
+ PATIENT PROFILE
+      Γöé
+      Γö£ΓöÇΓöÇ Personal Information
+      Γö£ΓöÇΓöÇ Appointments
+      Γö£ΓöÇΓöÇ Visits
+      Γö£ΓöÇΓöÇ Vital Signs
+      Γö£ΓöÇΓöÇ Diagnoses
+      Γö£ΓöÇΓöÇ Prescriptions
+      Γö£ΓöÇΓöÇ Laboratory Results
+      Γö£ΓöÇΓöÇ Medical History
+      Γö£ΓöÇΓöÇ Allergies
+      ΓööΓöÇΓöÇ Billing History
+13. Emergency Workflow
+ Emergency Patient
+       Γåô
+Emergency Registration
+       Γåô
+Immediate Triage
+       Γåô
+Vital Signs
+       Γåô
+Emergency Doctor
+       Γåô
+Diagnosis
+       Γåô
+Treatment
+       Γåô
+Need Lab?
+   ΓåÖ        Γåÿ
+ YES         NO
+ Γåô            Γåô
+Lab        Treatment
+ Γåô            Γåô
+Results       Γåô
+   ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÿ
+          Γåô
+   Patient Condition
+      ΓåÖ       Γåÿ
+
+=====PAGE 4 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 5
+ STABLE     CRITICAL
+   Γåô           Γåô
+Discharge   Admission
+14. Inpatient / Admission Workflow
+ Doctor recommends admission
+          Γåô
+Admission Request
+          Γåô
+Check Bed Availability
+       ΓåÖ       Γåÿ
+   Available   Full
+       Γåô         Γåô
+Assign Bed    Waiting List
+       Γåô
+Create Admission
+       Γåô
+Nurse monitors patient
+       Γåô
+Medication
+       Γåô
+Lab Tests
+       Γåô
+Doctor Reviews
+       Γåô
+Patient ready for discharge?
+       Γåô
+Generate Final Bill
+       Γåô
+Discharge
+15. Discharge Workflow
+ Doctor approves discharge
+          Γåô
+Final diagnosis
+          Γåô
+Discharge summary
+          Γåô
+Final prescription
+          Γåô
+Final bill
+          Γåô
+Payment
+          Γåô
+Discharge patient
+          Γåô
+Follow-up appointment
+          Γåô
+Patient notified
+16. Admin Workflow
+ ADMIN
+ Γöé
+ Γö£ΓöÇΓöÇ Dashboard
+ Γö£ΓöÇΓöÇ Users
+ Γöé    Γö£ΓöÇΓöÇ Doctors
+ Γöé    Γö£ΓöÇΓöÇ Nurses
+ Γöé    Γö£ΓöÇΓöÇ Receptionists
+ Γöé    Γö£ΓöÇΓöÇ Pharmacists
+ Γöé    ΓööΓöÇΓöÇ Lab Staff
+ Γö£ΓöÇΓöÇ Patients
+ Γö£ΓöÇΓöÇ Departments
+ Γö£ΓöÇΓöÇ Appointments
+ Γö£ΓöÇΓöÇ Pharmacy
+ Γö£ΓöÇΓöÇ Laboratory
+
+=====PAGE 5 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 6
+ Γö£ΓöÇΓöÇ Billing
+ Γö£ΓöÇΓöÇ Reports
+ Γö£ΓöÇΓöÇ Inventory
+ Γö£ΓöÇΓöÇ Notifications
+ ΓööΓöÇΓöÇ Settings
+17. Reports Workflow
+ Reports
+   Γöé
+   Γö£ΓöÇΓöÇ Patient Reports
+   Γö£ΓöÇΓöÇ Appointment Reports
+   Γö£ΓöÇΓöÇ Doctor Reports
+   Γö£ΓöÇΓöÇ Laboratory Reports
+   Γö£ΓöÇΓöÇ Pharmacy Reports
+   Γö£ΓöÇΓöÇ Revenue Reports
+   Γö£ΓöÇΓöÇ Billing Reports
+   Γö£ΓöÇΓöÇ Admission Reports
+   ΓööΓöÇΓöÇ Department Reports
+18. Role & Permission Workflow
+ ADMIN
+                      Γöé
+          ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+          Γåô           Γåô           Γåô
+       DOCTOR       NURSE    RECEPTIONIST
+          Γöé           Γöé           Γöé
+     Medical Data  Vital Signs  Registration
+     Diagnosis     Nursing      Appointments
+     Prescription  Notes        Billing
+          Γöé
+          Γö£ΓöÇΓöÇΓöÇΓöÇ LAB
+          Γöé
+          ΓööΓöÇΓöÇΓöÇΓöÇ PHARMACY
+19. Patient Portal
+ LOGIN
+  Γåô
+PATIENT DASHBOARD
+  Γöé
+  Γö£ΓöÇΓöÇ My Profile
+  Γö£ΓöÇΓöÇ My Appointments
+  Γö£ΓöÇΓöÇ Book Appointment
+  Γö£ΓöÇΓöÇ Doctors
+  Γö£ΓöÇΓöÇ Medical Records
+  Γö£ΓöÇΓöÇ Prescriptions
+  Γö£ΓöÇΓöÇ Laboratory Results
+  Γö£ΓöÇΓöÇ Bills
+  Γö£ΓöÇΓöÇ Payments
+  Γö£ΓöÇΓöÇ Notifications
+  ΓööΓöÇΓöÇ Logout
+20. Complete End-to-End Hospital Flow
+ PATIENT
+                       Γöé
+                       Γû╝
+               REGISTRATION
+                       Γöé
+                       Γû╝
+                APPOINTMENT
+                       Γöé
+                       Γû╝
+                   CHECK-IN
+
+=====PAGE 6 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 7
+                       Γöé
+                       Γû╝
+                    QUEUE
+                       Γöé
+                       Γû╝
+                    NURSE
+                       Γöé
+                 Vital Signs
+                       Γöé
+                       Γû╝
+                    DOCTOR
+                       Γöé
+              ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+              Γöé        Γöé         Γöé
+              Γû╝        Γû╝         Γû╝
+             LAB   PRESCRIPTION  ADMISSION
+              Γöé        Γöé         Γöé
+              Γû╝        Γû╝         Γû╝
+           RESULTS  PHARMACY    WARD
+              Γöé        Γöé         Γöé
+              ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+                       Γû╝
+                  TREATMENT
+                       Γöé
+                       Γû╝
+                    BILLING
+                       Γöé
+                       Γû╝
+                    PAYMENT
+                       Γöé
+                       Γû╝
+                  DISCHARGE
+                       Γöé
+                       Γû╝
+                FOLLOW-UP
+                       Γöé
+                       Γû╝
+                MEDICAL RECORD
+21. Recommended Figma Screens
+ AUTHENTICATION
+ΓÇó Login
+ΓÇó Forgot Password
+ΓÇó Reset Password
+ADMIN
+ΓÇó Dashboard
+ΓÇó Patients
+ΓÇó Doctors
+ΓÇó Staff
+ΓÇó Departments
+ΓÇó Appointments
+ΓÇó Billing
+ΓÇó Reports
+ΓÇó Settings
+DOCTOR
+ΓÇó Dashboard
+ΓÇó Patient Queue
+ΓÇó Consultation
+ΓÇó Medical Records
+ΓÇó Prescriptions
+ΓÇó Lab Requests
+NURSE
+ΓÇó Dashboard
+ΓÇó Queue
+ΓÇó Vital Signs
+ΓÇó Nursing Notes
+LABORATORY
+
+=====PAGE 7 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 8
+ΓÇó Dashboard
+ΓÇó Test Requests
+ΓÇó Sample Collection
+ΓÇó Results
+PHARMACY
+ΓÇó Dashboard
+ΓÇó Prescriptions
+ΓÇó Inventory
+ΓÇó Dispensing
+PATIENT
+ΓÇó Dashboard
+ΓÇó Appointments
+ΓÇó Medical Records
+ΓÇó Lab Results
+ΓÇó Prescriptions
+ΓÇó Bills
+ΓÇó Profile
+22. Core Design / UX Requirements
+ The UI should prioritize:
+1. Clarity
+2. Usability
+3. Consistency
+4. Accessibility
+5. Modern visual design
+6. Real-world hospital workflow
+Recommended common components:
+ΓÇó Sidebar navigation
+ΓÇó Top navigation
+ΓÇó Global search
+ΓÇó Breadcrumbs
+ΓÇó Cards
+ΓÇó Tables
+ΓÇó Filters
+ΓÇó Forms
+ΓÇó Modals
+ΓÇó Tabs
+ΓÇó Status badges
+ΓÇó Charts
+ΓÇó Notifications
+ΓÇó Toast messages
+ΓÇó Empty states
+ΓÇó Loading states
+ΓÇó Error states
+ΓÇó Confirmation dialogs
+ΓÇó Pagination
+
+=====PAGE 8 =====
+Hospital Management System ΓÇö Complete Workflow
+Page 9
+Project Development Order
+For implementation, build the system in this order so the workflow remains manageable:
+ 1. Authentication & Role Management
+2. Hospital / Department Setup
+3. Patient Registration
+4. Appointment Management
+5. Reception & Check-in
+6. Nurse / Vital Signs
+7. Doctor Consultation
+8. Medical Records
+9. Laboratory
+10. Pharmacy & Inventory
+11. Billing & Payments
+12. Admission / Ward
+13. Discharge & Follow-up
+14. Reports & Analytics
+15. Patient Portal
+16. Notifications
+17. Settings & Security
+18. Testing & Final UI/UX Polish
+
+=====PAGE 9 =====

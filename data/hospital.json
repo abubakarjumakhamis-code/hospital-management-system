@@ -1,0 +1,83 @@
+{
+  "patients": [
+    {
+      "id": "PAT-1048",
+      "name": "Amara Johnson",
+      "age": 34,
+      "gender": "Female",
+      "department": "Cardiology",
+      "status": "Admitted",
+      "registeredAt": "2026-10-03T08:15:00.000Z"
+    },
+    {
+      "id": "PAT-1047",
+      "name": "Noah Williams",
+      "age": 52,
+      "gender": "Male",
+      "department": "General Medicine",
+      "status": "Outpatient",
+      "registeredAt": "2026-10-03T07:45:00.000Z"
+    },
+    {
+      "id": "PAT-1046",
+      "name": "Zuri Patel",
+      "age": 19,
+      "gender": "Female",
+      "department": "Neurology",
+      "status": "Admitted",
+      "registeredAt": "2026-10-02T15:20:00.000Z"
+    },
+    {
+      "id": "PAT-1045",
+      "name": "Ethan Chen",
+      "age": 8,
+      "gender": "Male",
+      "department": "Pediatrics",
+      "status": "Outpatient",
+      "registeredAt": "2026-10-02T12:05:00.000Z"
+    },
+    {
+      "id": "PAT-1044",
+      "name": "Maya Thompson",
+      "age": 67,
+      "gender": "Female",
+      "department": "Cardiology",
+      "status": "Discharged",
+      "registeredAt": "2026-10-01T10:30:00.000Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "APT-021",
+      "time": "09:00 AM",
+      "patient": "Olivia Martin",
+      "doctor": "Dr. Sarah Chen",
+      "department": "Cardiology",
+      "status": "Checked in"
+    },
+    {
+      "id": "APT-022",
+      "time": "09:30 AM",
+      "patient": "Liam Davis",
+      "doctor": "Dr. James Okafor",
+      "department": "General Medicine",
+      "status": "In progress"
+    },
+    {
+      "id": "APT-023",
+      "time": "10:15 AM",
+      "patient": "Sofia Garcia",
+      "doctor": "Dr. Priya Shah",
+      "department": "Neurology",
+      "status": "Waiting"
+    },
+    {
+      "id": "APT-024",
+      "time": "11:00 AM",
+      "patient": "Ethan Chen",
+      "doctor": "Dr. Emily Foster",
+      "department": "Pediatrics",
+      "status": "Waiting"
+    }
+  ]
+}

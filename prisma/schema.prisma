@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  role         String
+  passwordHash String?
+  photoUrl     String?
+  createdAt    DateTime @default(now())
+  patient      Patient?
+}
+
+model Department {
+  id           String        @id @default(cuid())
+  name         String        @unique
+  description  String?
+  patients     Patient[]
+  doctors      Doctor[]
+  appointments Appointment[]
+}
+
+model Doctor {
+  id           String        @id @default(cuid())
+  name         String
+  specialty    String
+  available    Boolean       @default(true)
+  departmentId String
+  department   Department    @relation(fields: [departmentId], references: [id])
+  appointments Appointment[]
+  prescriptions Prescription[]
+}
+
+model Patient {
+  id           String       @id @default(cuid())
+  patientCode  String       @unique
+  name         String
+  age          Int
+  gender       String
+  phone        String?
+  status       String       @default("Outpatient")
+  userId       String?      @unique
+  user         User?        @relation(fields: [userId], references: [id])
+  departmentId String
+  department   Department   @relation(fields: [departmentId], references: [id])
+  registeredAt DateTime     @default(now())
+  appointments Appointment[]
+  visits       Visit[]
+  labRequests  LabRequest[]
+  prescriptions Prescription[]
+  bills        Bill[]
+  admissions   Admission[]
+}
+
+model Appointment {
+  id           String     @id @default(cuid())
+  aptCode      String     @unique
+  time         String
+  scheduledFor DateTime?
+  status       String     @default("Waiting")
+  patientId    String
+  patient      Patient    @relation(fields: [patientId], references: [id])
+  doctorId     String
+  doctor       Doctor     @relation(fields: [doctorId], references: [id])
+  departmentId String
+  department   Department @relation(fields: [departmentId], references: [id])
+  createdAt    DateTime   @default(now())
+}
+
+model Visit {
+  id        String   @id @default(cuid())
+  patientId String
+  patient   Patient  @relation(fields: [patientId], references: [id])
+  reason    String?
+  diagnosis String?
+  notes     String?
+  startedAt DateTime @default(now())
+  endedAt   DateTime?
+  vitals    Vital[]
+}
+
+model Vital {
+  id         String   @id @default(cuid())
+  visitId    String
+  visit      Visit    @relation(fields: [visitId], references: [id])
+  bloodPressure String?
+  temperature   Float?
+  pulse         Int?
+  weight       Float?
+  recordedAt  DateTime @default(now())
+}
+
+model LabRequest {
+  id          String    @id @default(cuid())
+  patientId   String
+  patient     Patient   @relation(fields: [patientId], references: [id])
+  testName    String
+  status      String    @default("Pending")
+  result      String?
+  requestedAt DateTime  @default(now())
+  completedAt DateTime?
+}
+
+model Prescription {
+  id         String   @id @default(cuid())
+  patientId  String
+  patient    Patient  @relation(fields: [patientId], references: [id])
+  doctorId   String
+  doctor     Doctor   @relation(fields: [doctorId], references: [id])
+  medication String
+  dosage     String?
+  status     String   @default("Active")
+  createdAt  DateTime @default(now())
+}
+
+model Bill {
+  id          String    @id @default(cuid())
+  patientId   String
+  patient     Patient   @relation(fields: [patientId], references: [id])
+  amount      Float
+  description String?
+  status      String    @default("Unpaid")
+  createdAt   DateTime  @default(now())
+  paidAt      DateTime?
+}
+
+model Admission {
+  id           String    @id @default(cuid())
+  patientId    String
+  patient      Patient   @relation(fields: [patientId], references: [id])
+  bedNumber    String?
+  ward         String?
+  status       String    @default("Admitted")
+  admittedAt   DateTime  @default(now())
+  dischargedAt DateTime?
+}
